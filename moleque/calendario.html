@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="logo.png" type="image/x-icon"> 
     <title>Calendário de Jogos</title> 
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-</head>
+</head>  
+
 <body>
     <nav>
         <ul>
             <li>
-                <img src="logo.png" height="130px" width="130px">
+                <img src="logo.png" height="130px" width="130px" alt="Logo">
             </li>
             <li><br>
                 <a href="index.html">Página Inicial</a>
@@ -29,7 +30,6 @@
         </ul> 
     </nav>  
     <div class="wraper">
-
         <div class="dias-da-semana">
             <span>Segunda</span>
             <span>Terça</span>
@@ -39,18 +39,18 @@
             <span>Sábado</span>
             <span>Domingo</span>
         </div>
-
         <div class="numero-dias">
             <span class="mes-anterior"> </span>
             <span class="mes-anterior"> </span>
         </div>
     </div>
-
+    <script>
+        let el = document.querySelector('.numero-dias');
+        for(i=1; i < 31; i++){
+        el.innerHTML+='<span>'+i+'</span>'; 
+        
+    }
+    </script>  
 </body>
-<script>
-    let el = document.querySelector('.numero-dias');
-    for(i=1; i < 31; i++){
-    el.innerHTML+='<span>'+i+'</span>';
-}
-</script>  
+
 </html>
